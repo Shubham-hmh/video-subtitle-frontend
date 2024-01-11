@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import VideoUpload from './components/VideoUpload';
 
-function App() {
+import VideoListComponent from './components/VideoListComponent';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 style={{textAlign:"center"}}>Video Subtitle Application</h1>
+      <VideoUpload  />
+      <VideoListComponent/>
     </div>
   );
-}
+};
 
 export default App;
