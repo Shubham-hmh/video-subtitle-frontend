@@ -13,7 +13,7 @@ const VideoListComponent = () => {
 
   const fetchAllVideos = async () => {
     try {
-      const response = await fetch('https://video-backend-mpzc.onrender.com/api/videos');
+      const response = await fetch('http://localhost:5000/api/videos');
       if (response.ok) {
         const data = await response.json();
         setVideos(data.videos);
@@ -35,7 +35,7 @@ const handlePlayVideo = async (videoId) => {
                 console.log(videoPath)
         
                 const videoContainer = document.getElementById(`video-container-${videoId}`);
-                videoContainer.innerHTML = `<video id="video-${videoId}" controls width="500" height="300"><source src="http://localhost:5000/${videoPath}" type="video/mp4" /></video>`;
+                videoContainer.innerHTML = `<video id="video-${videoId}" controls width="500" height="300"><source src="https://video-backend-mpzc.onrender.com/${videoPath}" type="video/mp4" /></video>`;
   
         const subtitleResponse = await fetch(`https://video-backend-mpzc.onrender.com/api/subtitles/${videoId}`);
         if (subtitleResponse.ok) {
@@ -73,8 +73,8 @@ const handlePlayVideo = async (videoId) => {
 
  // Add styles for subtitle text
  subtitleElement.style.fontSize = '16px';
- subtitleElement.style.color = '#fff'; // Set the text color for subtitle text
- subtitleElement.style.textAlign = 'center'; // Set the text alignment for subtitle text
+ subtitleElement.style.color = '#fff'; 
+ subtitleElement.style.textAlign = 'center'; 
 
 
                 subtitleContainer.appendChild(subtitleElement);
