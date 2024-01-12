@@ -13,7 +13,7 @@ const VideoListComponent = () => {
 
   const fetchAllVideos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/videos');
+      const response = await fetch('https://video-backend-mpzc.onrender.com/api/videos');
       if (response.ok) {
         const data = await response.json();
         setVideos(data.videos);
