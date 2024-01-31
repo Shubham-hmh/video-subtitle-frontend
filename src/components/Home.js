@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ShowCard from './ShowCard';
-import BookTicketForm from './BookTicketForm';
 
 const Home = () => {
   const [shows, setShows] = useState([]);
@@ -22,19 +21,6 @@ return (
           </div>
         ))}
       </div>
-      <div className="modal">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Booking Form</h5>
-                <button type="button" className="btn-close" ></button>
-              </div>
-              <div className="modal-body">
-                <BookTicketForm/>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
   );
 };
