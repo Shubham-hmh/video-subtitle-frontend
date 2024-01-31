@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const BookTicketForm = ({ show }) => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ const BookTicketForm = ({ show }) => {
 
     // Close the form or take other actions as needed
     console.log('Booking saved:', bookingInfo);
-    alert("Booking Successful!")
+    toast.success("Booking Successful!");
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams ,Link } from 'react-router-dom';
 import BookTicketForm from './BookTicketForm';
 
 const ShowDetails = () => {
@@ -16,6 +16,9 @@ const ShowDetails = () => {
     <div className="container mt-4">
       {show && (
         <div>
+        <Link to="/" className="btn btn-secondary mb-3">
+            Back to Home
+          </Link>
           <div className="row">
             <div className="col-md-4">
               <img
