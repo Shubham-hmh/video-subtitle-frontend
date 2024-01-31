@@ -47,7 +47,14 @@ const BookTicketForm = ({ show }) => {
 
     // Close the form or take other actions as needed
     console.log('Booking saved:', bookingInfo);
-    toast.success("Booking Successful!");
+    alert("Booking Successful!")
+    toast.success("Booking Successful!",{
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+    });
   };
 
   return (
