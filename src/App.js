@@ -1,16 +1,44 @@
+// import React from 'react';
+// import VideoUpload from './components/VideoUpload';
+
+// import VideoListComponent from './components/VideoListComponent';
+// import AudioPlayer from './components/AudioPlayer';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1 style={{textAlign:"center"}}>Video Subtitle Application</h1>
+//       {/* <VideoUpload  />
+//       <VideoListComponent/> */}
+//       <AudioPlayer/>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
 import React from 'react';
-import VideoUpload from './components/VideoUpload';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import VideoListComponent from './components/VideoListComponent';
+import Home from './components/Home';
 
-const App = () => {
+import ShowDetails from './components/ShowDetails';
+
+function App() {
   return (
-    <div>
-      <h1 style={{textAlign:"center"}}>Video Subtitle Application</h1>
-      <VideoUpload  />
-      <VideoListComponent/>
-    </div>
+ 
+
+        <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+          <Route path="/show/:id" element={<ShowDetails />} />
+
+          
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;

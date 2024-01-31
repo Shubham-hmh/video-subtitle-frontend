@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/components/VideoListComponent.js
+/src/components/videoListComponent.css
+/src/components/VideoService.js
+/src/components/VideoUpload.js
+/src/components/videoUpload.css
+/src/components/AudioPlayer.js
+
+
+
+
